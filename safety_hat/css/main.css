@@ -1,0 +1,203 @@
+td.details-control {
+	background: url('assets/plugins/datatables/img/details_open.png') no-repeat center center;
+	cursor: pointer;
+}
+
+tr.shown td.details-control {
+	background: url('assets/plugins/datatables/img/details_close.png') no-repeat center center;
+}
+
+button {
+	width: 60px;
+	height: 35px;
+	border: 0;
+	line-height: 15px;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 10px;
+	color: #97a0b3;
+	margin-left: 10px;
+}
+
+.btn_del {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+	border-radius: 2px;
+	padding: 8px 10px;
+	background-color: #e86c74  !important;
+	color: white;
+}
+
+.btn_del:hover {
+	background-color: #dc4e41 !important;
+}
+
+table.dataTable thead>tr>th.sorting_asc,
+table.dataTable thead>tr>th.sorting_desc,
+table.dataTable thead>tr>th.sorting,
+table.dataTable thead>tr>td.sorting_asc,
+table.dataTable thead>tr>td.sorting_desc,
+table.dataTable thead>tr>td.sorting {
+	padding-right: 0;
+}
+
+.t_img {
+	height: 60px;
+}
+
+th {
+	line-height: 60px;
+	text-align: center;
+}
+
+.jFiler {
+	display: inline-block;
+	width: 100%;
+}
+
+.jFiler-input-dragDrop {
+	width: 100%;
+	height: 240px;
+}
+
+.jFiler-item-container {
+
+}
+
+.card-body {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+}
+
+
+
+
+.template_input {
+	width: 50%;
+	display: inline-block;
+}
+
+.template {
+	margin-left: 30px;
+	border: 1px solid #CCCCCC;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	width: 60%;
+	height: 240px;
+	display: inline-block;
+	padding: 3px;
+}
+
+.max {
+	width: 100%;
+	height: auto;
+}
+
+.upJQuery {
+	cursor: pointer;
+}
+
+.temp {
+	height: 100%;
+	width: 100%;
+	border: 0.5px solid #C0C0C0;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.temp_top {
+	height: 70%;
+	width: 100%;
+	display: flex;
+}
+
+.temp_bottom {
+	height: 30%;
+	width: 100%;
+	display: flex;
+}
+
+
+.temp_left {
+	overflow: auto;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	;
+	display: flex;
+	align-items: center;
+}
+
+.temp_left img {
+	overflow: auto;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	width: 120px;
+}
+
+.temp_right {
+	overflow: auto;
+	margin-top: 30px;
+	display: flex;
+	width: 400px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.temp_right div {
+	padding-left: 10px;
+	overflow: auto;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	border-top: 1px solid #CCCCCC;
+	font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	height: 30%;
+	width: 300px;
+	/*以省略号...显示*/
+}
+.temp_1 {
+	box-shadow:  0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.temp_1 span {
+	margin-right: 20px;
+}
+
+.temp_2 span {
+	margin-right: 8px;
+}
+
+.temp_3 span {
+	margin-right: 10px;
+}
+
+#t_id,
+#t_name_1,
+#t_text_1,
+#t_eml_1,#t_job_1,#t_year_1 {
+	margin-right: 10px;
+}
+
+.foot {
+	overflow: auto;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid #CCCCCC;
+	padding-left: 30px;
+	font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+	font-size: 20px;
+	display: flex;
+	align-items: flex-end;
+	height: 40px;
+	width: 460px;
+	text-overflow: ellipsis;
+	/*以省略号...显示*/
+
+}
+.foot span{
+	margin-right: 30px;
+}
+
+.content-page {
+	margin-left: 0;
+}

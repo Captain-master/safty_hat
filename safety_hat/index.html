@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- Font Awesome CSS -->
+	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- Custom CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- BEGIN CSS for this page -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
+	<style>
+		.login_a{
+			color: #FFF;
+		}
+		.login_a:hover{
+			color: #F05B4F;
+		}
+		.right_h {
+			display: block;
+			float: left;
+
+			height: 30px;
+			margin-left: 10px;
+
+		}
+
+		.head_date {
+
+			height: 30px;
+			float: left;
+			margin-top: -30px;
+			font-size: 20px;
+			color: #fff;
+			margin-left: 150px;
+			margin-top:5px;
+		}
+		.camera{
+			width: 800px;
+			height: 600px;
+			background: #eee;
+			border-radius: 20px;
+			float: left;
+			margin-top: 20px;
+			margin-left: 30px;
+		}
+		.cam_opt{
+			width: 250px;
+			height: 600px;
+			float: right;
+			background: #212529;
+			border-radius: 10px;
+			margin-top: 20px;
+			margin-right: 50px;
+		}
+		.video_Form{
+			width: 500px;
+			height: 70px;
+			float: left;
+		}
+		.opt_ul{
+			width: 200px;
+			height: 500px;
+			float: left;
+			margin-left:25px ;
+			margin-top: 50px;
+			list-style: none;
+		}
+		.opt_ul li{
+			width:180px ;
+			height: 120px;
+			margin-top: 10px;
+			margin-left: 30px;
+			cursor: pointer;
+		}
+		.opt_ul i{
+			font-size: 40px;
+			color: dodgerblue;
+		}
+		.opt_ul p{
+			font-size: 20px;
+			margin-left: -30px;
+			color: #fff;
+		}
+		.picture{
+			width: 1100px;
+			height: 280px;
+			background: rgba(254, 200, 190,0.3);
+			float: left;
+			margin-left: 30px;
+			margin-top: 20px;
+			border-radius: 20px;
+		}
+		.pic_h2{
+			font-size: 28px;
+			width: 250px;
+			height: 30px;
+			line-height: 30px;
+			float: left;
+			margin-left: 450px;
+			letter-spacing: 2px;
+			margin-top: 5px;
+		}
+		.pic_ul{
+			width: 1000px;
+			height: 180px;
+			float: left;
+			margin-left:40px;
+			margin-top: 4px;
+			list-style: none;
+		}
+		.pic_ul li{
+			width:180px;
+			height: 150px;
+			float: left;
+			margin-left: 40px;
+		}
+		.ul_img{
+			width: 200px;
+			height: 150px;
+			cursor: pointer;
+		}
+		.pic_form{
+			float: left;
+			margin-left: 120px;
+			margin-top: -30px;
+		}
+		.pic_input{
+			width:1000px;
+			float: left;
+			margin-left: 120px;
+			margin-top: -20px;
+		}
+		.input_file1{
+			border-style: 2px solid #eee ;
+			width: 600px;
+			height: 25px;
+			border-radius: 3px;
+			background: #F0F0F0;
+		}
+		.input_file2{
+			border-style: 2px solid #eee ;
+			width: 300px;
+			height: 25px;
+			border-radius: 3px;
+			background: #F0F0F0;
+			margin-left: 80px;
+		}
+		.inspect_main{
+			width: 1200px;
+			height: 950px;
+			float: left;
+		}
+
+	</style>
+	<title>智能安全帽检测主页</title>
+</head>
+<body class="adminbody">
+
+<div id="main">
+
+	<!-- top bar navigation -->
+	<div class="headerbar">
+
+		<!-- LOGO -->
+		<div class="headerbar-left">
+			<img alt="Logo" src="assets/images/logo.png" /> <span><span id="head_show"></span>
+		<a href="login.html" id="head_a" class="login_a"></a></span>
+		</div>
+
+		<nav class="navbar-custom">
+
+			<ul class="list-inline float-right mb-0">
+				<div class="head_date" style="font-size: 18px; margin-right:100px;">
+					<h4 id="gt" class="right_h" style="color:#fff;">上午好</h4>
+					<h4 class="right_h" style="color: #fff; width: 130px;" id="adname">管理员</h4>
+					<span>
+						<h4 id="cg" class="right_h" style="width: 130px;">年月日</h4>
+						<h4 id="day" class="right_h">星期几</h4>
+						<h4 id="ti" class="right_h">时间</h4>
+					</span>
+				</div>
+
+
+
+				<li class="list-inline-item dropdown notif">
+					<a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+						<i class="fa fa-fw fa-bell-o"></i><span class="notif-bullet"></span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-lg">
+						<!-- item-->
+						<div class="dropdown-item noti-title">
+							<h5><small><span class="label label-danger pull-xs-right">5</span>Allerts</small></h5>
+						</div>
+
+						<!-- item-->
+						<a href="#" class="dropdown-item notify-item">
+							<div class="notify-icon bg-faded">
+								<img src="assets/images/avatars/avatar2.png" alt="img" class="rounded-circle img-fluid">
+							</div>
+							<p class="notify-details">
+								<b>John Doe</b>
+								<span>User registration</span>
+								<small class="text-muted">3 minutes ago</small>
+							</p>
+						</a>
+
+						<!-- item-->
+						<a href="#" class="dropdown-item notify-item">
+							<div class="notify-icon bg-faded">
+								<img src="assets/images/avatars/avatar3.png" alt="img" class="rounded-circle img-fluid">
+							</div>
+							<p class="notify-details">
+								<b>Michael Cox</b>
+								<span>Task 2 completed</span>
+								<small class="text-muted">12 minutes ago</small>
+							</p>
+						</a>
+
+						<!-- item-->
+						<a href="#" class="dropdown-item notify-item">
+							<div class="notify-icon bg-faded">
+								<img src="assets/images/avatars/avatar4.png" alt="img" class="rounded-circle img-fluid">
+							</div>
+							<p class="notify-details">
+								<b>Michelle Dolores</b>
+								<span>New job completed</span>
+								<small class="text-muted">35 minutes ago</small>
+							</p>
+						</a>
+
+						<!-- All-->
+						<a href="#" class="dropdown-item notify-item notify-all">
+							View All Allerts
+						</a>
+
+					</div>
+				</li>
+
+				<li class="list-inline-item dropdown notif">
+					<a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+						<img src="images/小埋.jpg" alt="Profile image" class="avatar-rounded">
+					</a>
+					<div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+						<!-- item-->
+						<div class="dropdown-item noti-title">
+							<h5 class="text-overflow"><small>你好管理员</small> </h5>
+						</div>
+
+
+
+						<!-- item-->
+						<a href="login.html" class="dropdown-item notify-item">
+							<i class="fa fa-power-off"></i> <span>注销</span>
+						</a>
+
+						<!-- item-->
+
+					</div>
+				</li>
+
+			</ul>
+
+			<ul class="list-inline menu-left mb-0">
+				<li class="float-left">
+					<button class="button-menu-mobile open-left">
+						<i class="fa fa-fw fa-bars"></i>
+					</button>
+				</li>
+			</ul>
+
+		</nav>
+
+	</div>
+	<!-- End Navigation -->
+
+
+	<!-- Left Sidebar -->
+	<div class="left main-sidebar">
+
+		<div class="sidebar-inner leftscroll">
+
+			<div id="sidebar-menu">
+
+				<ul>
+
+					<li class="submenu">
+						<a href="index.html"><i class="fa fa-fw fa-bars"></i><span> 首页 </span> </a>
+					</li>
+					<li class="submenu">
+						<a href="tables-datatable.html"><i class="fa fa-fw fa-area-chart"></i><span> 图表信息 </span> </a>
+					</li>
+					<li class="submenu">
+						<a href="award.html"><i class="fa fa-fw fa-table"></i> <span> 人员奖惩表 </span></a>
+					</li>
+					<li class="submenu">
+						<a href="pro-users.html"><i class="fa fa-fw fa-star"></i><span> 员工信息表 </span> </a>
+					</li>
+
+				</ul>
+
+				<div class="clearfix"></div>
+
+			</div>
+
+			<div class="clearfix"></div>
+
+		</div>
+
+	</div>
+	<!-- End Sidebar -->
+
+
+	<div class="content-page">
+
+		<!-- Start content -->
+		<div class="content">
+
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="breadcrumb-holder">
+							<h1 class="main-title float-left">首页</h1>
+							<ol class="breadcrumb float-right">
+								<li class="breadcrumb-item">安全帽监测</li>
+								<li class="breadcrumb-item active">首页</li>
+							</ol>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<!-- end row -->
+
+
+
+				<div class="row">
+					<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+						<div class="card-box noradius noborder bg-default">
+							<i class="fa fa-file-text-o float-right text-white"></i>
+							<h6 class="text-white text-uppercase m-b-20">当前监测人数为</h6>
+							<h1 class="m-b-20 text-white counter" id="all_people"></h1>
+							<span class="text-white">15 New Orders</span>
+						</div>
+					</div>
+
+
+
+					<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+						<div class="card-box noradius noborder bg-info">
+							<i class="fa fa-user-o float-right text-white"></i>
+							<h6 class="text-white text-uppercase m-b-20" >佩戴人数</h6>
+							<h1 class="m-b-20 text-white counter" id="hated_people"></h1>
+							<span class="text-white">25 New Users</span>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+						<div class="card-box noradius noborder bg-danger">
+							<i class="fa fa-bell-o float-right text-white"></i>
+							<h6 class="text-white text-uppercase m-b-20">未佩戴人数</h6>
+							<h1 class="m-b-20 text-white counter" id="no_hat_people" ></h1>
+							<span class="text-white">5 New Alerts</span>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+						<div class="card-box noradius noborder bg-warning">
+							<i class="fa fa-bar-chart float-right text-white"></i>
+							<h6 class="text-white text-uppercase m-b-20">未佩戴比例</h6>
+							<h1 class="m-b-20 text-white counter" id="no_hat_ratio"></h1>
+							<span class="text-white">Bounce rate: 25%</span>
+						</div>
+					</div>
+				</div>
+				<!-- end row -->
+				<div class="row">
+
+
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+						<div class="card mb-3">
+							<div class="card-header">
+								<h3>安全帽佩带检测</h3>
+								<div class="camera" id="cam">
+									<!--图片与视频-->
+
+								</div>
+								<div class="cam_opt">
+									<ul class="opt_ul">
+										<li id="open_cam"><i class="fa fa-camera bigfonts" aria-hidden="true"></i>
+											<p>打开摄像头</p>
+										</li>
+										<li id="close_cam"><i class="fa fa-window-close-o bigfonts" aria-hidden="true"></i>
+											<p>关闭摄像头</p></li>
+										<li id="record"><i class="fa fa-download bigfonts" aria-hidden="true"></i>
+											<p>保存回放</p></li>
+										<li id="stop"><i class="fa fa-download bigfonts" aria-hidden="true"></i>
+											<p>停止录制</p></li>
+									</ul>
+
+								</div>
+								<div class="picture">
+									<h1 class="pic_h2">请选择图片</h1>
+									<ul class="pic_ul" id="pic_ul">
+										<li><img src="assets/images/test_000002.jpg" class="ul_img"></li>
+										<li><img src="assets/images/test_000034.jpg" class="ul_img"></li>
+										<li><img src="assets/images/test_000313.jpg" class="ul_img"></li>
+										<li><img src="assets/images/test_000547.jpg" class="ul_img"></li>
+									</ul>
+									<div class="form-group pic_input">
+										<form id="uploadForm" enctype="multipart/form-data" class="video_Form">
+											<input type="file" name="image" accept="image/*">
+											<input type="button" value="上传图片" id="upFileBtn">
+										</form>
+										<form id="upload" enctype="multipart/form-data" class="video_Form">
+											<input type="file" name="image" accept="video/*">
+											<input type="button" value="上传视频" id="upFile">
+										</form>
+
+
+
+
+
+                                                                                      </div>
+
+
+                                                                                    </div>
+
+                                                                                </div>
+
+
+                                                                                <div class="card-footer small text-muted">安全帽监测</div>
+                                                                            </div><!-- end card-->
+									</div>
+								</div>
+
+
+
+								<!-- end row -->
+
+
+
+
+
+
+								<div class="card-footer small text-muted">Updated today at 11:59 PM</div>
+							</div><!-- end card-->
+						</div>
+
+					</div>
+
+
+
+				</div>
+				<!-- END container-fluid -->
+
+			</div>
+			<!-- END content -->
+
+		</div>
+		<!-- END content-page -->
+
+		<footer class="footer">
+			<span class="text-right">
+			Copyright <a target="_blank" href="#">Pike Admin</a>
+			</span>
+			<span class="float-right">
+			More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">安全头盔</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">安全头盔</a>
+			</span>
+		</footer>
+
+	</div>
+</body>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="own_js/index.js"></script>
+<script src="own_js/util.js"></script>
+<script src="assets/js/modernizr.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+
+<!-- App js -->
+<script src="assets/js/pikeadmin.js"></script>
+
+<!-- BEGIN Java Script for this page -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Counter-Up-->
+<script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		// data-tables
+		$('#example1').DataTable();
+
+		// counter-up
+		$('.counter').counterUp({
+			delay: 10,
+			time: 600
+		});
+	} );
+</script>
+
+
+<!--		图片上传-->
+<script type="text/javascript">
+	$('#upFileBtn').click(function () {
+		var formFile = new FormData($('#uploadForm')[0])
+		$.ajax({
+			url:"http://127.0.0.1:8080/index/get_img",
+			type:"POST",
+			data:formFile,
+			processData:false,
+			contentType:false,
+			success: function (data) {
+				document.getElementById('cam').innerHTML=data
+			}
+		})
+	})
+
+	$('#upFile').click(function () {
+		var formFile = new FormData($('#upload')[0])
+		$.ajax({
+			url:"http://127.0.0.1:8080/index/get_video",
+			type:"POST",
+			data:formFile,
+			processData:false,
+			contentType:false,
+			success: function (event) {
+				if(event.code==1){
+					path = server_url + "index/send_video"
+					document.getElementById('cam').innerHTML = '<img src="'+path+'">'
+				}
+			}
+		})
+	})
+
+
+</script>
+
+
+<script>
+
+
+	var ctx1 = document.getElementById("lineChart").getContext('2d');
+	var lineChart = new Chart(ctx1, {
+		type: 'bar',
+		data: {
+			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			datasets: [{
+				label: '佩戴人数',
+				backgroundColor: '#3EB9DC',
+				data: [10, 14, 6, 7, 13, 9, 13, 16, 11, 8, 12, 9]
+			}, {
+				label: '未佩戴人数',
+				backgroundColor: '#EBEFF3',
+				data: [12, 14, 6, 7, 13, 6, 13, 16, 10, 8, 11, 12]
+			}]
+
+		},
+		options: {
+			tooltips: {
+				mode: '未佩戴人数',
+				intersect: false
+			},
+			responsive: true,
+			scales: {
+				xAxes: [{
+					stacked: true,
+				}],
+				yAxes: [{
+					stacked: true
+				}]
+			}
+		}
+	});
+
+
+
+</script>
+<!-- END Java Script for this page -->
+</html>

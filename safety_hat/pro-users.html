@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>人员管理页面</title>
+		<meta name="description" content="Bootstrap 4 Admin Theme">
+		
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+		<!-- Switchery css -->
+		<link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+		
+		<!-- Bootstrap CSS --> 
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome CSS -->
+		<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Custom CSS -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			#workersTable{font-size:20px;}
+			#deletebtn{border:none}
+		</style>
+	
+		<!-- BEGIN CSS for this page -->
+
+		<!-- END CSS for this page -->
+				
+</head>
+
+<body class="adminbody">
+
+<div id="main">
+
+	<!-- top bar navigation -->
+	<div class="headerbar">
+
+		<!-- LOGO -->
+        <div class="headerbar-left">
+			<a href="index.html" class="logo"><img alt="logo" src="assets/images/logo.png" /> <span>Admin</span></a>
+        </div>
+
+        <nav class="navbar-custom">
+
+                    <ul class="list-inline float-right mb-0">
+
+						<li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-question-circle"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small>Help and Support</small></h5>
+                                </div>
+
+                                <!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Do you want custom development to integrate this theme?</b>
+                                        <span>Contact Us</span>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Do you want PHP version of the theme that save dozens of hours of work?</b>
+                                        <span>Try Pike Admin PRO</span>
+                                    </p>
+                                </a>                               
+
+                                <!-- All-->
+                                <a title="Clcik to visit Pike Admin Website" target="_blank" href="#" class="dropdown-item notify-item notify-all">
+                                    <i class="fa fa-link"></i> Visit Pike Admin Website
+                                </a>
+
+                            </div>
+                        </li>
+						
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-envelope-o"></i><span class="notif-bullet"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small><span class="label label-danger pull-xs-right">12</span>Contact Messages</small></h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Jokn Doe</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">2 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Michael Jackson</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">15 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Foxy Johnes</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">Yesterday, 13:30</small>
+                                    </p>
+                                </a>
+
+                                <!-- All-->
+                                <a href="#" class="dropdown-item notify-item notify-all">
+                                    View All
+                                </a>
+
+                            </div>
+                        </li>
+                        
+						<li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-bell-o"></i><span class="notif-bullet"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-lg">
+								<!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small><span class="label label-danger pull-xs-right">5</span>Allerts</small></h5>
+                                </div>
+								
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar2.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>John Doe</b>
+                                        <span>User registration</span>
+                                        <small class="text-muted">3 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar3.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>Michael Cox</b>
+                                        <span>Task 2 completed</span>
+                                        <small class="text-muted">12 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar4.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>Michelle Dolores</b>
+                                        <span>New job completed</span>
+                                        <small class="text-muted">35 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- All-->
+                                <a href="#" class="dropdown-item notify-item notify-all">
+                                    View All Allerts
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="text-overflow"><small>Hello, admin</small> </h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="pro-profile.html" class="dropdown-item notify-item">
+                                    <i class="fa fa-user"></i> <span>Profile</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <i class="fa fa-power-off"></i> <span>Logout</span>
+                                </a>
+
+								<!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">
+                                    <i class="fa fa-external-link"></i> <span>Pike Admin</span>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left">
+								<i class="fa fa-fw fa-bars"></i>
+                            </button>
+                        </li>                        
+                    </ul>
+
+        </nav>
+
+	</div>
+	<!-- End Navigation -->
+	
+ 
+	<!-- Left Sidebar -->
+	<div class="left main-sidebar">
+	
+		<div class="sidebar-inner leftscroll">
+
+			<div id="sidebar-menu">
+        
+			<ul>
+
+
+
+				<li class="submenu">
+					<a href="index.html"><i class="fa fa-fw fa-bars"></i><span> 首页 </span> </a>
+				</li>
+				<li class="submenu">
+					<a href="tables-datatable.html"><i class="fa fa-fw fa-area-chart"></i><span> 图表信息 </span> </a>
+				</li>
+				<li class="submenu">
+					<a href="award.html"><i class="fa fa-fw fa-table"></i> <span> 人员奖惩表 </span></a>
+				</li>
+				<li class="submenu">
+					<a href="pro-users.html"><i class="fa fa-fw fa-star"></i><span> 员工信息表 </span> </a>
+				</li>
+					
+            </ul>
+
+            <div class="clearfix"></div>
+
+			</div>
+        
+			<div class="clearfix"></div>
+
+		</div>
+
+	</div>
+	<!-- End Sidebar -->
+
+
+    <div class="content-page">
+	
+		<!-- Start content -->
+        <div class="content">
+            
+			<div class="container-fluid">
+
+				
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="breadcrumb-holder">
+							<h1 class="main-title float-left">车间员工</h1>
+							<ol class="breadcrumb float-right">
+							<li class="breadcrumb-item">Home</li>
+							<li class="breadcrumb-item active">Users</li>
+							</ol>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<!-- end row -->
+
+            
+						<div class="alert alert-danger" role="alert">
+						<h4 class="alert-heading">车间员工信息管理表!</h4>
+						<p>该车间的员工信息均由管理员统计注册并进行管理</p>
+						<p><b>员工信息管理它为单位处理员工的有关问题提供了有效的凭证和依据，对员工信息的有效管理可以提高企业的生产效率和运营能力。</b></p>
+						<p>查看员工未佩戴安全帽及奖罚情况 <a target="_blank" href="award.html"><b>奖罚信息表</b></a></p>
+						</div>
+
+			
+			
+						<div class="row">
+									
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">						
+										
+								<div class="card mb-3">
+								
+									<div class="card-header">
+									<span class="pull-right"><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal_add_user"><i class="fa fa-user-plus" aria-hidden="true"></i>添加员工</button></span>
+									<div class="modal fade custom-modal" tabindex="-1" role="dialog" aria-labelledby="modal_add_user" aria-hidden="true" id="modal_add_user">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									
+							<!--添加员工-->			
+								    <form action="#" method="post" enctype="multipart/form-data">				
+									<div class="modal-header">
+									<h5 class="modal-title">添加员工</h5>
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>          	
+									</div>
+										
+									<div class="modal-body">       
+										<div class="row">
+											<div class="col-lg-12">
+											<div class="form-group">
+											<label>员工编号</label>
+											<input class="form-control" name="id" id="worker_id" type="text" required />
+											</div>
+											</div>
+										</div>
+														
+										<div class="row">
+											<div class="col-lg-12">
+											<div class="form-group">
+											<label>员工姓名</label>
+											<input class="form-control" name="name" id="worker_name" type="text" required />
+											</div>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>年龄</label>
+											<input class="form-control" name="email" id="age" type="text" required />
+											</div>
+											</div>  
+											
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>性别</label>
+											<input class="form-control" name="sex" id="sex" type="text" required />
+											</div>
+											</div>  
+										</div>
+										
+										<div class="row">
+										
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>职位</label>
+											<select name="role_id" class="form-control" id="position" required>
+											<option value="">- select -</option>
+											<optgroup label="Staff member">
+																	<option value="1">Administrator</option>
+																		<option value="2">Manager</option>
+																		<option value="3">worker</option>
+																	</optgroup>
+											
+											
+											</select>
+											</div>
+											</div>					               
+										
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>工龄</label>
+											<input class="form-control" id="worktime" name="skype" type="text" value="0"/>
+											</div>
+											</div>  				
+										</div>
+										
+										
+										<div class="row">
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>邮箱</label>
+											<input class="form-control" name="email" id="email" type="email" required />
+											</div>
+											</div> 
+										
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>籍贯</label>
+											<input class="form-control" name="hometown" id="hometown" type="text" required />
+											</div>
+											</div>
+										
+										</div>
+										
+										<div class="form-group">
+										<label>选择头像 (optional):</label> <br />
+										<input type="file" name="avater" id="avater" accept="image/*">
+										<!--<input type="file" name="f" id="f" />-->  
+                                      <!--<input type="button" name="aa" id="aa" value="测试" onclick="javascript: _s();" />--> 
+										<!--<input type="file" class="img" name="avater" id="avater" accept="avater/*" οnchange="l(this)"/>-->
+										</div>
+										
+									</div>             
+									
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" onclick="addWorker()">添加</button>
+									</div>
+										
+									</form>	
+									
+								</div>
+							</div>
+						</div> 
+									<div id="allworker" style="font-size: 18px;">
+										<i class="fa fa-user"></i> 所有员工人数:
+									</div>								
+									</div>
+									<!-- end card-header -->	
+												
+									<div class="card-body">
+											<div class="table-responsive">
+											<table class="table table-bordered" id="workersTable">
+											<thead>
+											  <tr>
+												<th style="width:100px">ID</th>
+												<th>员工姓名</th>
+												<th style="width:150px">年龄</th>
+												<th style="width:150px">性别</th>
+												<th style="width:150px">职位</th>
+												<th style="width:150px">工龄</th>
+												<th style="width:180px">邮箱</th>
+												<th style="width:170px">籍贯</th>
+												<th style="width:220px">操作</th>
+											  </tr>
+											</thead>
+											<tbody>
+											<tr >
+													<!--<td>5</td>
+													<td>
+														<span style="float: left; margin-right:10px;"><img alt="image" style="max-width:40px; height:auto;" src="assets/images/avatars/avatar1.png" /></span>
+														<strong>姓名</strong>							<br />
+													<small>webmaster@website.com</small>
+													</td>
+													<td>25</td>
+													<td>女</td>
+													<td>manager</td>
+													<td>2</td>
+													<td>hunan</td>-->
+													<!--<td><a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal_edit_user_5"><i class="fa fa-pencil" aria-hidden="true"></i></a>-->
+							<div class="modal fade custom-modal" tabindex="-1" role="dialog" aria-hidden="true" id="modal_edit_user_5">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									
+									<form action="#" method="post" enctype="multipart/form-data">			
+									<div class="modal-header">
+									<h5 class="modal-title">Edit user</h5>
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>          	
+									</div>
+										
+									<div class="modal-body">    		
+										<div class="row">
+											<div class="col-lg-12">
+											<div class="form-group">
+											<label>员工编号</label>
+											<input class="form-control" name="name" type="text" id="ch_id" disabled="true" />
+											</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12">
+											<div class="form-group">
+											<label>更改姓名</label>
+											<input class="form-control" name="name" type="text" id="ch_name" required value="" />
+											</div>
+											</div>
+										</div>
+										
+										<div class="row">  
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>更改年龄</label>
+											<input class="form-control" id="ch_age" type="text" />
+											</div>
+											</div>  
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>更改性别</label>
+											<input class="form-control" type="text" value="" id="ch_sex"/>
+											</div>
+											</div> 
+										</div>
+										
+										<div class="row">
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>更改职位</label>
+											<select name="role_id" class="form-control" id="ch_position" required>
+											<option value="">- select -</option>
+											<optgroup label="Staff member">
+																	<option  value="1">Administrator</option>
+																		<option  value="2">Manager</option>
+																		<option selected="selected" value="3">Author</option>
+																</optgroup>
+											</select>
+											</div>
+											</div>		
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>更改工龄</label>
+											<input class="form-control" type="text" id="ch_worktime" required value="1" />
+											</div>
+											</div>
+											 				
+										</div>
+										
+										
+										<div class="row">
+											<div class="col-lg-6">
+											<div class="form-group">
+											<label>更改邮箱</label>
+											<input class="form-control" type="email" id="ch_email" required value="webmaster@website.com" />
+											</div>
+											</div>
+										    <div class="col-lg-6">
+											<div class="form-group">
+											<label>更改籍贯</label>
+											<input class="form-control" type="text" id="ch_hometown" required value="China" />
+											</div>
+											</div>
+										
+										</div>
+										
+										<div class="form-group">
+										<label>更改头像</label> <br />
+										<input type="file" name="image" id="ch_avater">
+										</div>
+										
+									</div>             
+									
+									<div class="modal-footer">
+										<input type="hidden" name="user_id" value="5" />
+										<button type="button" class="btn btn-primary" onclick="changeInfo()">提交更改</button>
+									</div>
+										
+									</form>	
+									
+								</div>
+							</div>
+						</div> 
+					<!--</td>-->
+											</tr>
+											</tbody>
+											</table>
+											</div>	
+																			
+														
+									</div>	
+									<!-- end card-body -->								
+										
+								</div>
+								<!-- end card -->					
+
+							</div>
+							<!-- end col -->	
+																
+						</div>
+						<!-- end row -->	
+
+            </div>
+			<!-- END container-fluid -->
+
+		</div>
+		<!-- END content -->
+
+    </div>
+	<!-- END content-page -->
+    
+	<footer class="footer">
+		<span class="text-right">
+		</span>
+		<span class="float-right">
+		More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">安全头盔</a> - Collect from <a href="http://www.cssmoban.com/" title="安全头盔" target="_blank">安全头盔</a>
+		</span>
+	</footer>
+
+</div>
+<!-- END main -->
+
+<script src="assets/js/modernizr.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/plugins/switchery/switchery.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/pikeadmin.js"></script>
+<script src="own_js/new_file.js"></script>
+<script src="own_js/original_worker.js"></script>
+<script src="own_js/workersInfo.js"></script>
+<script src="js/url.js"></script>
+
+
+<!-- BEGIN Java Script for this page -->
+
+<!-- END Java Script for this page -->
+
+</body>
+</html>
